@@ -1,0 +1,23 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "lint": "designmd lint DESIGN.md",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
+  },
+  "dependencies": {
+    "@google/design.md": "^0.4.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/html-vite": "^10.6.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-static": "^1.47.0",
+    "simple-icons": "^16.32.0",
+    "storybook": "^10.6.0"
+  }
+}

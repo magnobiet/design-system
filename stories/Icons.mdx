@@ -1,0 +1,278 @@
+import { Meta, Markdown } from '@storybook/addon-docs/blocks';
+
+import iconArrowRight from 'lucide-static/icons/arrow-right.svg?raw';
+import iconArrowLeft from 'lucide-static/icons/arrow-left.svg?raw';
+import iconArrowUpRight from 'lucide-static/icons/arrow-up-right.svg?raw';
+import iconChevronDown from 'lucide-static/icons/chevron-down.svg?raw';
+import iconExternalLink from 'lucide-static/icons/external-link.svg?raw';
+import iconDownload from 'lucide-static/icons/download.svg?raw';
+import iconMenu from 'lucide-static/icons/menu.svg?raw';
+import iconHouse from 'lucide-static/icons/house.svg?raw';
+import iconSearch from 'lucide-static/icons/search.svg?raw';
+import iconFilter from 'lucide-static/icons/filter.svg?raw';
+import iconSettings from 'lucide-static/icons/settings.svg?raw';
+import iconUser from 'lucide-static/icons/user.svg?raw';
+import iconBell from 'lucide-static/icons/bell.svg?raw';
+import iconMail from 'lucide-static/icons/mail.svg?raw';
+import iconCalendar from 'lucide-static/icons/calendar.svg?raw';
+import iconLock from 'lucide-static/icons/lock.svg?raw';
+import iconEye from 'lucide-static/icons/eye.svg?raw';
+import iconEyeOff from 'lucide-static/icons/eye-off.svg?raw';
+import iconPlus from 'lucide-static/icons/plus.svg?raw';
+import iconCheck from 'lucide-static/icons/check.svg?raw';
+import iconX from 'lucide-static/icons/x.svg?raw';
+import iconPencil from 'lucide-static/icons/pencil.svg?raw';
+import iconTrash from 'lucide-static/icons/trash-2.svg?raw';
+import iconCopy from 'lucide-static/icons/copy.svg?raw';
+import iconCircleCheck from 'lucide-static/icons/circle-check.svg?raw';
+import iconCircleAlert from 'lucide-static/icons/circle-alert.svg?raw';
+import iconTriangleAlert from 'lucide-static/icons/triangle-alert.svg?raw';
+import iconInfo from 'lucide-static/icons/info.svg?raw';
+import iconLoader from 'lucide-static/icons/loader-circle.svg?raw';
+import iconActivity from 'lucide-static/icons/activity.svg?raw';
+import iconZap from 'lucide-static/icons/zap.svg?raw';
+import iconCpu from 'lucide-static/icons/cpu.svg?raw';
+import iconDatabase from 'lucide-static/icons/database.svg?raw';
+import iconTerminal from 'lucide-static/icons/terminal.svg?raw';
+import iconCode from 'lucide-static/icons/code.svg?raw';
+import iconHeart from 'lucide-static/icons/heart.svg?raw';
+import iconStar from 'lucide-static/icons/star.svg?raw';
+import iconMoon from 'lucide-static/icons/moon.svg?raw';
+import iconSun from 'lucide-static/icons/sun.svg?raw';
+
+import iconWhatsapp from 'simple-icons/icons/whatsapp.svg?raw';
+import iconInstagram from 'simple-icons/icons/instagram.svg?raw';
+import iconFacebook from 'simple-icons/icons/facebook.svg?raw';
+import iconBrandX from 'simple-icons/icons/x.svg?raw';
+import iconGithub from 'simple-icons/icons/github.svg?raw';
+import iconYoutube from 'simple-icons/icons/youtube.svg?raw';
+import iconGoogle from 'simple-icons/icons/google.svg?raw';
+import iconApple from 'simple-icons/icons/apple.svg?raw';
+import iconDiscord from 'simple-icons/icons/discord.svg?raw';
+import iconFigma from 'simple-icons/icons/figma.svg?raw';
+import iconVercel from 'simple-icons/icons/vercel.svg?raw';
+import iconReact from 'simple-icons/icons/react.svg?raw';
+import iconAngular from 'simple-icons/icons/angular.svg?raw';
+import iconTypescript from 'simple-icons/icons/typescript.svg?raw';
+import iconNodejs from 'simple-icons/icons/nodedotjs.svg?raw';
+import iconDocker from 'simple-icons/icons/docker.svg?raw';
+import iconStripe from 'simple-icons/icons/stripe.svg?raw';
+import iconSpotify from 'simple-icons/icons/spotify.svg?raw';
+import iconDribbble from 'simple-icons/icons/dribbble.svg?raw';
+import iconBehance from 'simple-icons/icons/behance.svg?raw';
+import iconNotion from 'simple-icons/icons/notion.svg?raw';
+import iconNpm from 'simple-icons/icons/npm.svg?raw';
+import iconTelegram from 'simple-icons/icons/telegram.svg?raw';
+import iconReddit from 'simple-icons/icons/reddit.svg?raw';
+import iconTiktok from 'simple-icons/icons/tiktok.svg?raw';
+import iconNextjs from 'simple-icons/icons/nextdotjs.svg?raw';
+import iconTwitch from 'simple-icons/icons/twitch.svg?raw';
+
+export const BrandIcon = ({ svg, name, hex }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '8px',
+      padding: '16px 8px',
+      background: '#141A2E',
+      border: '1px solid #27314D',
+      borderRadius: '12px',
+    }}
+  >
+    <span
+      style={{ display: 'inline-flex', width: '24px', height: '24px', fill: hex }}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
+
+    <code style={{ fontFamily: 'JetBrains Mono', fontSize: '12px', color: '#94A3B8' }}>{name}</code>
+
+    <code style={{ fontFamily: 'JetBrains Mono', fontSize: '10px', color: '#7B8CA3' }}>{hex}</code>
+  </div>
+);
+
+
+export const Icon = ({ svg, name, color = '#F4F7FF' }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '8px',
+      padding: '16px 8px',
+      background: '#141A2E',
+      border: '1px solid #27314D',
+      borderRadius: '12px',
+    }}
+  >
+    <span
+      style={{ display: 'inline-flex', color }}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
+    <code style={{ fontFamily: 'JetBrains Mono', fontSize: '11px', color: '#94A3B8' }}>{name}</code>
+  </div>
+);
+
+export const Grid = ({ children }) => (
+  <div
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))',
+      gap: '8px',
+      margin: '16px 0 32px',
+    }}
+  >
+    {children}
+  </div>
+);
+
+<Meta title="Fundamentos / Ícones" />
+
+# Ícones
+
+Duas bibliotecas, cada uma com um papel claro: [Lucide](https://lucide.dev/) para interface e [Simple Icons](https://simpleicons.org/) para marcas de terceiros. Não misturar as duas no mesmo componente.
+
+Os exemplos abaixo usam SVGs importados com `?raw` via Vite. No código da aplicação, prefira o pacote do framework (`lucide-react`, `lucide-angular`, etc.).
+
+## Interface (Lucide)
+
+Geométricos, outline, stroke uniforme: `1.5px` para detalhes, `2px` padrão e `2.5px` para destaque. Tamanho padrão de `24px` com área de toque mínima de `44px`.
+
+### Navegação
+
+<Grid>
+  <Icon svg={iconHouse} name="house" />
+  <Icon svg={iconMenu} name="menu" />
+  <Icon svg={iconChevronDown} name="chevron-down" />
+  <Icon svg={iconArrowRight} name="arrow-right" />
+  <Icon svg={iconArrowLeft} name="arrow-left" />
+  <Icon svg={iconArrowUpRight} name="arrow-up-right" />
+  <Icon svg={iconExternalLink} name="external-link" />
+  <Icon svg={iconSearch} name="search" />
+</Grid>
+
+### Ações comuns
+
+<Grid>
+  <Icon svg={iconPlus} name="plus" />
+  <Icon svg={iconCheck} name="check" />
+  <Icon svg={iconX} name="x" />
+  <Icon svg={iconPencil} name="pencil" />
+  <Icon svg={iconCopy} name="copy" />
+  <Icon svg={iconTrash} name="trash-2" />
+  <Icon svg={iconDownload} name="download" />
+  <Icon svg={iconFilter} name="filter" />
+</Grid>
+
+### Estados e feedback
+
+Estado nunca depende só de cor. O ícone reforça a mensagem.
+
+<Grid>
+  <Icon svg={iconCircleCheck} name="circle-check" color="#22C55E" />
+  <Icon svg={iconInfo} name="info" color="#22D3EE" />
+  <Icon svg={iconTriangleAlert} name="triangle-alert" color="#F59E0B" />
+  <Icon svg={iconCircleAlert} name="circle-alert" color="#EF4444" />
+  <Icon svg={iconLoader} name="loader-circle" />
+  <Icon svg={iconBell} name="bell" />
+  <Icon svg={iconEye} name="eye" />
+  <Icon svg={iconEyeOff} name="eye-off" />
+</Grid>
+
+### Dados e tecnologia
+
+<Grid>
+  <Icon svg={iconActivity} name="activity" />
+  <Icon svg={iconZap} name="zap" color="#A3E635" />
+  <Icon svg={iconCpu} name="cpu" />
+  <Icon svg={iconDatabase} name="database" />
+  <Icon svg={iconTerminal} name="terminal" />
+  <Icon svg={iconCode} name="code" />
+</Grid>
+
+### Interface geral
+
+<Grid>
+  <Icon svg={iconUser} name="user" />
+  <Icon svg={iconSettings} name="settings" />
+  <Icon svg={iconMail} name="mail" />
+  <Icon svg={iconCalendar} name="calendar" />
+  <Icon svg={iconLock} name="lock" />
+  <Icon svg={iconHeart} name="heart" />
+  <Icon svg={iconStar} name="star" />
+  <Icon svg={iconMoon} name="moon" />
+  <Icon svg={iconSun} name="sun" />
+</Grid>
+
+---
+
+## Marcas (Simple Icons)
+
+SVGs monocromáticos com a cor oficial de cada marca. Sobre fundo escuro, marcas com hex `#000000` usam `#F4F7FF`.
+
+### Redes sociais
+
+<Grid>
+  <BrandIcon svg={iconWhatsapp} name="whatsapp" hex="#25D366" />
+  <BrandIcon svg={iconInstagram} name="instagram" hex="#FF0069" />
+  <BrandIcon svg={iconFacebook} name="facebook" hex="#0866FF" />
+  <BrandIcon svg={iconBrandX} name="x" hex="#F4F7FF" />
+  <BrandIcon svg={iconYoutube} name="youtube" hex="#FF0000" />
+  <BrandIcon svg={iconTiktok} name="tiktok" hex="#F4F7FF" />
+  <BrandIcon svg={iconReddit} name="reddit" hex="#FF4500" />
+  <BrandIcon svg={iconTwitch} name="twitch" hex="#9146FF" />
+  <BrandIcon svg={iconTelegram} name="telegram" hex="#26A5E4" />
+  <BrandIcon svg={iconDiscord} name="discord" hex="#5865F2" />
+</Grid>
+
+### Tecnologia e desenvolvimento
+
+<Grid>
+  <BrandIcon svg={iconGithub} name="github" hex="#F4F7FF" />
+  <BrandIcon svg={iconReact} name="react" hex="#61DAFB" />
+  <BrandIcon svg={iconAngular} name="angular" hex="#F4F7FF" />
+  <BrandIcon svg={iconNextjs} name="nextdotjs" hex="#F4F7FF" />
+  <BrandIcon svg={iconTypescript} name="typescript" hex="#3178C6" />
+  <BrandIcon svg={iconNodejs} name="nodedotjs" hex="#5FA04E" />
+  <BrandIcon svg={iconDocker} name="docker" hex="#2496ED" />
+  <BrandIcon svg={iconNpm} name="npm" hex="#CB3837" />
+  <BrandIcon svg={iconVercel} name="vercel" hex="#F4F7FF" />
+</Grid>
+
+### Plataformas e serviços
+
+<Grid>
+  <BrandIcon svg={iconGoogle} name="google" hex="#4285F4" />
+  <BrandIcon svg={iconApple} name="apple" hex="#F4F7FF" />
+  <BrandIcon svg={iconStripe} name="stripe" hex="#635BFF" />
+  <BrandIcon svg={iconSpotify} name="spotify" hex="#1ED760" />
+  <BrandIcon svg={iconNotion} name="notion" hex="#F4F7FF" />
+  <BrandIcon svg={iconFigma} name="figma" hex="#F24E1E" />
+</Grid>
+
+### Design e criatividade
+
+<Grid>
+  <BrandIcon svg={iconDribbble} name="dribbble" hex="#EA4C89" />
+  <BrandIcon svg={iconBehance} name="behance" hex="#1769FF" />
+</Grid>
+
+---
+
+## Convenções
+
+<Markdown>
+{`
+| Regra | Orientação |
+| ----- | ---------- |
+| Interface | [Lucide](https://lucide.dev/) para ícones de UI |
+| Marcas | [Simple Icons](https://simpleicons.org/) para logos de terceiros |
+| Tamanho | \`24px\` padrão; área de toque mínima de \`44px\` |
+| Cor (marcas) | Usar a cor oficial ou \`#F4F7FF\` sobre fundos escuros |
+| Separação | Não misturar Lucide e Simple Icons no mesmo componente |
+| Distorção | Não distorcer, recolorir fora do padrão ou modificar a geometria |
+`}
+</Markdown>
+
+O catálogo completo do Simple Icons está em [simpleicons.org](https://simpleicons.org/). O slug de cada ícone está no [repositório oficial](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md).

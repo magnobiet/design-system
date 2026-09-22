@@ -1,0 +1,147 @@
+import { Meta, Markdown } from '@storybook/addon-docs/blocks';
+
+import logoSvg from '../assets/logo.svg?raw';
+
+export const LogoGrid = ({ children }) => (
+  <div
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '16px',
+      margin: '24px 0 40px',
+    }}
+  >
+    {children}
+  </div>
+);
+
+export const LogoCard = ({ svg, label, bg, border }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '16px',
+      padding: '48px 32px 24px',
+      background: bg,
+      border: border || '1px solid #27314D',
+      borderRadius: '16px',
+      minWidth: '320px',
+    }}
+  >
+    <span
+      style={{ display: 'inline-flex', maxWidth: '240px' }}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
+    <code
+      style={{
+        fontFamily: 'JetBrains Mono',
+        fontSize: '12px',
+        color: bg === '#F4F7FF' ? '#27314D' : '#94A3B8',
+      }}
+    >
+      {label}
+    </code>
+  </div>
+);
+
+export const ImageCard = ({ src, label, bg, border }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '16px',
+      padding: '32px',
+      background: bg,
+      border: border || '1px solid #27314D',
+      borderRadius: '16px',
+    }}
+  >
+    <img
+      src={src}
+      alt={label}
+      style={{ maxWidth: '200px', height: 'auto' }}
+    />
+
+    <code
+      style={{
+        fontFamily: 'JetBrains Mono',
+        fontSize: '12px',
+        color: bg === '#F4F7FF' ? '#27314D' : '#94A3B8',
+      }}
+    >
+      {label}
+    </code>
+  </div>
+);
+
+<Meta title="Fundamentos / Logo" />
+
+# Logo
+
+A logo tem proporção aproximada de **390 x 190**. Preservar a geometria original; não redesenhar, distorcer ou modificar a forma do símbolo.
+
+## Variação primária
+
+Símbolo `#6C5CE7` sobre fundo escuro `#0B1020`. Versão principal, usada na maioria das aplicações.
+
+<LogoGrid>
+  <LogoCard
+    svg={logoSvg}
+    label="Primária - #6C5CE7 sobre #0B1020"
+    bg="#0B1020"
+  />
+</LogoGrid>
+
+## Variação secundária
+
+Símbolo `#F4F7FF` sobre fundo escuro `#0B1020`. Para quando a marca precisa de menor peso visual.
+
+<LogoGrid>
+  <LogoCard
+    svg={logoSvg.replace('fill="#6C5CE7"', 'fill="#F4F7FF"')}
+    label="Secundária - #F4F7FF sobre #0B1020"
+    bg="#0B1020"
+  />
+</LogoGrid>
+
+## Variação monocromática
+
+Símbolo `#0B1020` sobre fundo claro `#F4F7FF`. Para fundo claro, impressão e aplicações monocromáticas.
+
+<LogoGrid>
+  <LogoCard
+    svg={logoSvg.replace('fill="#6C5CE7"', 'fill="#0B1020"')}
+    label="Monocromática - #0B1020 sobre #F4F7FF"
+    bg="#F4F7FF"
+    border="1px solid #E2E8F0"
+  />
+</LogoGrid>
+
+## Gradiente
+
+Permitido em aplicações digitais de destaque. A versão sólida continua sendo a principal.
+
+<LogoGrid>
+  <LogoCard
+    svg={logoSvg.replace('fill="#6C5CE7"', 'fill="url(#brandGrad)"').replace('<path', '<defs><linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6C5CE7" /><stop offset="100%" stop-color="#22D3EE" /></linearGradient></defs><path')}
+    label="Gradiente - #6C5CE7 para #22D3EE"
+    bg="#0B1020"
+  />
+</LogoGrid>
+
+## Regras de uso
+
+<Markdown>
+{`
+| Regra | Orientação |
+| ----- | ---------- |
+| Proporção | Preservar a geometria original (390 x 190) |
+| Área de proteção | Margem mínima equivalente à altura do "M" ao redor do símbolo |
+| Tamanho mínimo | \`120px\` de largura em digital; \`30mm\` em impressão |
+| Distorção | Nunca distorcer, rotacionar ou modificar a forma |
+| Cores | Usar apenas as variações documentadas acima |
+| Fundos | Nunca aplicar sobre fundos que comprometam o contraste |
+`}
+</Markdown>

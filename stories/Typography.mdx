@@ -1,0 +1,94 @@
+import { Meta, Typeset, Markdown } from '@storybook/addon-docs/blocks';
+
+<Meta title="Fundamentos / Tipografia" />
+
+# Tipografia
+
+Três famílias, cada uma com um papel claro. Não misturar outras além dessas.
+
+- **Space Grotesk**: títulos e display (H1 a H4, headlines, números de destaque). Peso 600, tracking apertado.
+- **Inter**: corpo e controles (parágrafos, navegação, botões, formulários, labels).
+- **JetBrains Mono**: dados e código (blocos de código, métricas, parâmetros, labels técnicos). Usar figuras tabulares para evitar deslocamento de layout.
+
+## Space Grotesk (display e headlines)
+
+<Typeset
+  fontFamily="Space Grotesk"
+  fontWeight={600}
+  fontSizes={['60px', '48px', '36px', '24px', '20px']}
+  sampleText="Tecnologia com precisão"
+/>
+
+<Markdown>
+{`
+| Token                | Tamanho | Peso | Altura de linha | Tracking  | Uso                         |
+| -------------------- | ------- | ---- | --------------- | --------- | --------------------------- |
+| \`display-xl\`         | \`60px\`    | 600  | \`60px\`            | \`-0.05em\`   | Display principal (desktop) |
+| \`display-xl-mobile\`  | \`48px\`    | 600  | \`48px\`            | \`-0.025em\`  | Display principal (mobile)  |
+| \`display-lg\`         | \`48px\`    | 600  | \`48px\`            | \`-0.025em\`  | Display secundário          |
+| \`display-lg-mobile\`  | \`36px\`    | 600  | \`40px\`            | \`-0.025em\`  | Display secundário (mobile) |
+| \`headline-lg\`        | \`36px\`    | 600  | \`40px\`            | \`-0.025em\`  | Headlines grandes           |
+| \`headline-md\`        | \`24px\`    | 600  | \`32px\`            | \`-0.025em\`  | Headlines médias            |
+| \`headline-sm\`        | \`20px\`    | 600  | \`28px\`            | 0         | Headlines pequenas          |
+`}
+</Markdown>
+
+## Inter (corpo e controles)
+
+<Typeset
+  fontFamily="Inter"
+  fontWeight={400}
+  fontSizes={['18px', '16px', '14px']}
+  sampleText="Interfaces claras transmitem controle e confiança."
+/>
+
+<Typeset
+  fontFamily="Inter"
+  fontWeight={500}
+  fontSizes={['14px']}
+  sampleText="Label de média ênfase"
+/>
+
+<Typeset
+  fontFamily="Inter"
+  fontWeight={600}
+  fontSizes={['12px']}
+  sampleText="LABEL DE BAIXA ÊNFASE"
+/>
+
+<Markdown>
+{`
+| Token       | Tamanho | Peso | Altura de linha | Tracking | Uso                              |
+| ----------- | ------- | ---- | --------------- | -------- | -------------------------------- |
+| \`body-lg\`   | \`18px\`    | 400  | \`28px\`            | 0        | Corpo de texto em destaque       |
+| \`body-md\`   | \`16px\`    | 400  | \`26px\`            | -        | Corpo padrão (entrelinha 1.625)  |
+| \`body-sm\`   | \`14px\`    | 400  | \`20px\`            | -        | Texto auxiliar e denso           |
+| \`label-md\`  | \`14px\`    | 500  | \`20px\`            | 0        | Labels de formulário e controles |
+| \`label-sm\`  | \`12px\`    | 600  | \`16px\`            | \`0.025em\`  | Labels de baixa ênfase, caixa alta em cabeçalhos |
+`}
+</Markdown>
+
+## JetBrains Mono (dados e código)
+
+<Typeset
+  fontFamily="JetBrains Mono"
+  fontWeight={400}
+  fontSizes={['14px']}
+  sampleText="const tokens = { primary: '#6C5CE7' }"
+/>
+
+<Typeset
+  fontFamily="JetBrains Mono"
+  fontWeight={500}
+  fontSizes={['12px']}
+  sampleText="metric.p95 = 128ms"
+/>
+
+<Markdown>
+{`
+| Token      | Tamanho | Peso | Altura de linha | Uso                                  |
+| ---------- | ------- | ---- | --------------- | ------------------------------------ |
+| \`code-md\`  | \`14px\`    | 400  | \`20px\`            | Blocos de código, métricas           |
+| \`code-sm\`  | \`12px\`    | 500  | \`16px\`            | Parâmetros e labels técnicos         |
+`}
+</Markdown>

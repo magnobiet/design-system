@@ -1,0 +1,161 @@
+import { Meta, ColorPalette, ColorItem, Markdown } from '@storybook/addon-docs/blocks';
+
+<Meta title="Fundamentos / Cores" />
+
+# Cores
+
+Paleta calibrada para contraste sobre base azul-marinho profunda. Distribuição recomendada: `60%` fundo e superfícies escuras, `20%` superfícies elevadas, `10%` marca e `10%` divididos entre accent, terciária, tipografia e elementos claros.
+
+## Superfícies
+
+Superfícies escuras em camadas. Cada uma delimitada por borda estrutural `1px solid #27314D`.
+
+<ColorPalette>
+  <ColorItem
+    title="Base"
+    subtitle="Canvas e containers mais baixos"
+    colors={{
+      'surface / background': '#0B1020',
+      'surface-dim': '#0B1020',
+      'surface-container-lowest': '#0B1020',
+    }}
+  />
+
+  <ColorItem
+    title="Elevadas"
+    subtitle="Cards, containers, modais, popovers"
+    colors={{
+      'surface-container-low / surface-container': '#141A2E',
+      'surface-container-high / surface-variant': '#1C243D',
+      'surface-container-highest / surface-bright': '#27314D',
+    }}
+  />
+
+  <ColorItem
+    title="Inversas"
+    subtitle="Contextos claros sobre escuros"
+    colors={{
+      'inverse-surface': '#F4F7FF',
+      'inverse-on-surface': '#0B1020',
+    }}
+  />
+</ColorPalette>
+
+## Tipografia e conteúdo
+
+<ColorPalette>
+  <ColorItem
+    title="Texto"
+    subtitle="Hierarquia de conteúdo"
+    colors={{
+      'on-surface / on-background': '#F4F7FF',
+      'on-surface-variant': '#94A3B8',
+      'outline (texto terciário, placeholders)': '#7B8CA3',
+    }}
+  />
+
+  <ColorItem
+    title="Bordas"
+    subtitle="Definição estrutural de `1px`"
+    colors={{
+      'outline-variant': '#27314D',
+      'outline': '#7B8CA3',
+    }}
+  />
+</ColorPalette>
+
+## Marca
+
+<ColorPalette>
+  <ColorItem
+    title="Primária"
+    subtitle="Logo, CTAs, elementos principais"
+    colors={{
+      'primary / surface-tint': '#6C5CE7',
+      'inverse-primary (hover)': '#7B6FF0',
+      'primary-container (ativo/profundo)': '#5848D6',
+      'on-primary / on-primary-container': '#F4F7FF',
+    }}
+  />
+</ColorPalette>
+
+Gradiente de assinatura. Usar apenas em aplicações digitais de destaque:
+
+<ColorPalette>
+  <ColorItem
+    title="Gradiente da marca"
+    subtitle="linear-gradient(135deg, #6C5CE7 0%, #22D3EE 100%)"
+    colors={{ gradient: 'linear-gradient(135deg, #6C5CE7 0%, #22D3EE 100%)' }}
+  />
+</ColorPalette>
+
+## Acentos
+
+<ColorPalette>
+  <ColorItem
+    title="Secundária"
+    subtitle="Ciano elétrico: links, foco, destaques de precisão"
+    colors={{
+      'secondary / info': '#22D3EE',
+      'on-secondary / on-info': '#0B1020',
+      'secondary-container': '#1C243D',
+      'on-secondary-container': '#22D3EE',
+    }}
+  />
+
+  <ColorItem
+    title="Terciária"
+    subtitle="Lima energético: ação, crescimento, resultado (apenas `5%` a `10%` dos visuais)"
+    colors={{
+      'tertiary': '#A3E635',
+      'on-tertiary': '#0B1020',
+    }}
+  />
+</ColorPalette>
+
+## Estados funcionais
+
+Cores funcionais complementam a identidade, nunca substituem. Não use cor como único recurso para comunicar estado.
+
+<ColorPalette>
+  <ColorItem
+    title="Sucesso"
+    colors={{ 'success': '#22C55E', 'on-success': '#0B1020' }}
+  />
+
+  <ColorItem
+    title="Aviso"
+    colors={{ 'warning': '#F59E0B', 'on-warning': '#0B1020' }}
+  />
+
+  <ColorItem
+    title="Erro"
+    subtitle="Para texto de erro corrido, usar #F87171 (~5.9:1 sobre o fundo)"
+    colors={{ 'error': '#EF4444', 'on-error': '#F4F7FF', 'error-text': '#F87171' }}
+  />
+</ColorPalette>
+
+## Nomes das cores
+
+<Markdown>
+{`
+| Nome da cor | Hexadecimal |
+| ----------- | ----------- |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #0B1020; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Ebony Black | #0B1020 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #141A2E; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Mirage | #141A2E |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #1C243D; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Cosmos | #1C243D |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #27314D; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Vintage Navy | #27314D |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #F4F7FF; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Blue White | #F4F7FF |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #94A3B8; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Oslo | #94A3B8 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #7B8CA3; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Fashion Denim | #7B8CA3 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #6C5CE7; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Lady Blue | #6C5CE7 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #5848D6; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Majorele Blue | #5848D6 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #7B6FF0; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Medium Slate Blue | #7B6FF0 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #22D3EE; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Average Cyan | #22D3EE |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #A3E635; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Nour | #A3E635 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #EF4444; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Blaze Red | #EF4444 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #815858; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Dark Mocha | #815858 |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #22C55E; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Crispy Mint Green | #22C55E |
+| <span style="display: inline-block; width: 16px; height: 16px; background: #F59E0B; border:1px solid #27314D; border-radius:2px; margin-right:8px;"></span>Strong Amber | #F59E0B |
+`}
+</Markdown>

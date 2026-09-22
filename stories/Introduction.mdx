@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introdução" />
+
+# Foundation
+
+Tokens, padrões e componentes do Foundation. Dark UI com bordas estruturais de `1px`, glow controlado e precisão tipográfica.
+
+## Stack
+
+- **Tailwind CSS** para estilização. Os tokens documentados aqui mapeiam direto para utilities do Tailwind.
+- **Lucide** para ícones de interface: [lucide.dev](https://lucide.dev/). Geométricos, outline, stroke uniforme (`1.5px` detalhe, `2px` padrão, `2.5px` destaque).
+- **Simple Icons** para ícones de marca: [simpleicons.org](https://simpleicons.org/). Logos de terceiros em SVG monocromático.
+
+## Convenções
+
+- Estados nunca dependem só de cor. Sempre combine com ícone, texto ou borda.
+- Todo elemento interativo precisa de foco visível: `outline: 2px solid #22D3EE; outline-offset: 3px`.
+- Animações curtas e discretas: `120ms`, `180ms` ou `320ms`, com `cubic-bezier(0.22, 1, 0.36, 1)`. Respeitar `prefers-reduced-motion`.
+
+## Design System como contexto para LLMs
+
+O arquivo `DESIGN.md` na raiz do projeto contém a especificação completa do design system: tokens, convenções, exemplos de uso e mapeamento para utilities do Tailwind. Ele está disponível como contexto para assistentes de IA e LLMs.
+
+## Navegação
+
+- [Cores](/docs/fundamentos-cores--docs): paleta completa, superfícies, marca, acentos e estados funcionais.
+- [Tipografia](/docs/fundamentos-tipografia--docs): famílias, escalas, pesos e usos.
+- [Logo](/docs/fundamentos-logo--docs): variações e regras de uso da marca.
+- [Ícones](/docs/fundamentos-icones--docs): bibliotecas de ícones e convenções.
+- [Identidade verbal](/docs/fundamentos-identidade-verbal--docs): voz, tom, vocabulário, exemplos e checklist de revisão.
