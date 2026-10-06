@@ -26,7 +26,7 @@ importers:
         version: 6.1.1(vite@8.3.0(esbuild@0.28.2)(yaml@2.9.1))
       lucide-static:
         specifier: ^1.47.0
-        version: 1.47.0
+        version: 1.51.0
       simple-icons:
         specifier: ^16.32.0
         version: 16.32.0
@@ -1023,8 +1023,8 @@ packages:
   loupe@3.2.1:
     resolution: {integrity: sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ==}
 
-  lucide-static@1.47.0:
-    resolution: {integrity: sha512-yWIrkdXc688Feq5VjOktsKmV5Ikc7y5Nu3rrdtbr8nWjkJWk8QlnZfVtIak22Af+fNhZ7k4cTJpZo1zmj7X5sA==}
+  lucide-static@1.51.0:
+    resolution: {integrity: sha512-ts58ApMc5w5SHHUJBtGO+mgf9lo79FApQ1LttKQoJiMrWNZt8zxWA7R6owK6DoGA3XLjJXc/7rDJh1feonl79g==}
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -2135,7 +2135,7 @@ snapshots:
 
   loupe@3.2.1: {}
 
-  lucide-static@1.47.0: {}
+  lucide-static@1.51.0: {}
 
   lz-string@1.5.0: {}
 
