@@ -29,7 +29,7 @@ importers:
         version: 1.47.0
       simple-icons:
         specifier: ^16.32.0
-        version: 16.32.0
+        version: 16.35.0
       storybook:
         specifier: ^10.6.0
         version: 10.6.0(@types/react@19.3.0)(react@19.3.0)
@@ -1238,8 +1238,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  simple-icons@16.32.0:
-    resolution: {integrity: sha512-BwqATHxAulx7X6kNdTkecy7PBjLkgtAHcgrwYLd9iA+cD2At9DzhJwdwaSELk2+aZe01IfiM/Wxtyp68Dvup2A==}
+  simple-icons@16.35.0:
+    resolution: {integrity: sha512-TCfl/2+GTrx0nCo4pEWGvxhOb8c6NsqOU1OpwjtF4lwJAthB8IYVD0fuIMjLMg6JFuG1YBO0t1iETQqJLqkoJA==}
     engines: {node: '>=0.12.18'}
 
   source-map-js@1.2.1:
@@ -2618,7 +2618,7 @@ snapshots:
 
   semver@7.8.5: {}
 
-  simple-icons@16.32.0: {}
+  simple-icons@16.35.0: {}
 
   source-map-js@1.2.1: {}
 
